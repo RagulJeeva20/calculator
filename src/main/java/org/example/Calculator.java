@@ -6,6 +6,8 @@ import java.util.logging.Logger;
 
 class Calci
 {
+    Logger l = Logger.getLogger("tyler");
+
     int a;
     int b;
     public void toset(int a,int b)
@@ -21,36 +23,38 @@ class Calci
     {
         return b;
     }
-    public int Cal(int a,int b)
+    public int cal(int a, int b)
     {
+        l.info("");
         return 0;
     }
 }
 class Addition extends Calci
 {
-
-    public int Cal(int a, int b) {
+    @Override
+    public int cal(int a, int b) {
         return a+b;
     }
 }
 class Subraction extends Calci
 {
-
-    public int Cal(int a,int b) {
+    @Override
+    public int cal(int a, int b) {
         return a-b;
     }
 }
 class Multi extends Calci
 {
-
-    public int Cal(int a,int b) {
+    @Override
+    public int cal(int a, int b) {
         return a*b;
     }
 }
 class Division extends Calci
 {
+    @Override
 
-    public int Cal(int a,int b) {
+    public int cal(int a, int b) {
         return a%b;
     }
 }
@@ -76,25 +80,25 @@ public class Calculator {
                 Addition ad = new Addition();
                 c = ad;
                 c.toset(a, b);
-                l.log(Level.INFO, () -> "Addition of 2 numbers is:" + ad.Cal(ad.toget1(), ad.toget2()));
+                l.log(Level.INFO, () -> "Addition of 2 numbers is:" + ad.cal(ad.toget1(), ad.toget2()));
                 break;
             case 2:
                 Subraction su = new Subraction();
                 c = su;
                 c.toset(a, b);
-                l.log(Level.INFO, () -> "Subtraction of 2 numbers is:" + su.Cal(su.toget1(), su.toget2()));
+                l.log(Level.INFO, () -> "Subtraction of 2 numbers is:" + su.cal(su.toget1(), su.toget2()));
                 break;
             case 3:
                 Multi m = new Multi();
                 c = m;
                 c.toset(a, b);
-                l.log(Level.INFO, () -> "Multiplication of 2 numbers is:" + m.Cal(m.toget1(), m.toget2()));
+                l.log(Level.INFO, () -> "Multiplication of 2 numbers is:" + m.cal(m.toget1(), m.toget2()));
                 break;
             case 4:
                 Division d = new Division();
                 c = d;
                 c.toset(a, b);
-                l.log(Level.INFO, () -> "Multiplication of 2 numbers is:" + d.Cal(d.toget1(), d.toget2()));
+                l.log(Level.INFO, () -> "Multiplication of 2 numbers is:" + d.cal(d.toget1(), d.toget2()));
                 break;
 
             default:
