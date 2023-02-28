@@ -4,60 +4,6 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-class Calci
-{
-    Logger l = Logger.getLogger("tyler");
-
-    int a;
-    int b;
-    public void toset(int a,int b)
-    {
-        this.a=a;
-        this.b=b;
-    }
-    public int toget1()
-    {
-        return a;
-    }
-    public int toget2()
-    {
-        return b;
-    }
-    public int cal(int a, int b)
-    {
-        l.info("");
-        return 0;
-    }
-}
-class Addition extends Calci
-{
-    @Override
-    public int cal(int a, int b) {
-        return a+b;
-    }
-}
-class Subraction extends Calci
-{
-    @Override
-    public int cal(int a, int b) {
-        return a-b;
-    }
-}
-class Multi extends Calci
-{
-    @Override
-    public int cal(int a, int b) {
-        return a*b;
-    }
-}
-class Division extends Calci
-{
-    @Override
-
-    public int cal(int a, int b) {
-        return a%b;
-    }
-}
 
 public class Calculator {
 
